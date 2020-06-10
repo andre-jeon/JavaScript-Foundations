@@ -111,12 +111,11 @@ For example, variableInterestRate(200000, 0.04, 30) should console.log:
 
 function variableInterestRate(P, I, N){
     let counter = interestRate - 0.03;
-    let task5 = task4 - 
-        for (i = 0; i < 10; i++) {
-            let task4 = P * (((I/12) * Math.pow((1 + (I/12)), (N*12))) / ((Math.pow((1 + (I/12)), (N*12))) - 1));
-            console.log(`${name}, with an interest rate of ${counter.toFixed(3)}, your monthly rate is $${task5.toFixed(0)}`);
+
+        for (i = 0; i < 9; i++) {
+            let task4 = P * (((counter/12) * Math.pow((1 + (counter/12)), (N*12))) / ((Math.pow((1 + (counter/12)), (N*12))) - 1));
+            console.log(`${name}, with an interest rate of ${counter.toFixed(3)}, your monthly rate is $${task4.toFixed(0)}`);
             counter = counter + 0.005;
-            task5 = task5 *
         }
 }
 console.log(variableInterestRate(200000, 0.05, 30));
