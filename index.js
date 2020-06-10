@@ -63,11 +63,11 @@ For example,
 mortgageCalculator(200000, 0.05, 30); <-- should return 1,073.64
 */
 
-function mortgageCalculator(P, I, N){
-    return P * I * N;
+function mortgageCalculator(P,I,N){
+    let task4 = P * (((I/12) * Math.pow((1 + (I/12)), (N*12))) / ((Math.pow((1 + (I/12)), (N*12))) - 1));
+    return task4;
 }
-
-console.log(mortgageCalculator(4, 2, 3));
+console.log(mortgageCalculator(200000, 0.05, 30));
 
 // 🏡 Task 5: Conditionals
 /* Add another paramter to your function called credit score. This parameter will be a number between 0 and 800 (a credit score).
