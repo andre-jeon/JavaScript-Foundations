@@ -110,7 +110,7 @@ For example, variableInterestRate(200000, 0.04, 30) should console.log:
 */
 
 function variableInterestRate(P, I, N){
-    let counter = interestRate - 0.03;
+    let counter = I - 0.03;
 
         for (i = 0; i < 9; i++) {
             let task4 = P * (((counter/12) * Math.pow((1 + (counter/12)), (N*12))) / ((Math.pow((1 + (counter/12)), (N*12))) - 1));
