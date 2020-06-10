@@ -42,7 +42,7 @@ let numerator = n2;
 let denominator = n1 - 1;
 let monthlyRate = principal * (numerator / denominator);
 
-console.log(monthlyRate);
+/*console.log(monthlyRate);
 
 // 🏡 Task 3: Function
 /* Create a function called `mortgageCalculator` that combines all of the steps from task 1 and 2 and returns a sentence "{Name}, your monthly rate is ${monthlyRate}"
@@ -50,7 +50,11 @@ console.log(monthlyRate);
 If your name is `Oscar` mortgageCalculator() should return "Oscar, your monthly rate is 1073.64"
 */
 
+function mortgageCalculator() {
+    return (`${name}, your monthly rate is ${monthlyRate}`);
+}
 
+console.log(mortgageCalculator());
 
 // 🏡 Task 4: Arguments and Parameters
 /* Substitute the variables in your functions for parameters such that you can substitute `P`, `I`, and `N` when you call the function.
