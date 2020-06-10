@@ -77,7 +77,7 @@ Then, add control flow within your function such that IF creditScore is above 74
 Hint: To drop an interest rate by 5% you can take monthlyRate and multiply it by 0.95. Similarly, to increase an interest rate by 5% you'd do monthlyRate * 1.05. 
 */
 
-function mortgageCalculator(P, I, N, creditScore){
+/*function mortgageCalculator(P, I, N, creditScore){
     let task4 = P * (((I/12) * Math.pow((1 + (I/12)), (N*12))) / ((Math.pow((1 + (I/12)), (N*12))) - 1));
     let above740 = 0.95 * (P * (((I/12) * Math.pow((1 + (I/12)), (N*12))) / ((Math.pow((1 + (I/12)), (N*12))) - 1)));
     let below660 = 1.05 * (P * (((I/12) * Math.pow((1 + (I/12)), (N*12))) / ((Math.pow((1 + (I/12)), (N*12))) - 1)));
@@ -109,6 +109,17 @@ For example, variableInterestRate(200000, 0.04, 30) should console.log:
 "{Name}, with an interest rate of 0.06, your monthly rate is $1199"
 */
 
+function variableInterestRate(P, I, N){
+    let counter = interestRate - 0.03;
+    let task5 = task4 - 
+        for (i = 0; i < 10; i++) {
+            let task4 = P * (((I/12) * Math.pow((1 + (I/12)), (N*12))) / ((Math.pow((1 + (I/12)), (N*12))) - 1));
+            console.log(`${name}, with an interest rate of ${counter.toFixed(3)}, your monthly rate is $${task5.toFixed(0)}`);
+            counter = counter + 0.005;
+            task5 = task5 *
+        }
+}
+console.log(variableInterestRate(200000, 0.05, 30));
 
 
 
