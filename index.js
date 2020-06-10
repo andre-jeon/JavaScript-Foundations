@@ -63,7 +63,7 @@ For example,
 mortgageCalculator(200000, 0.05, 30); <-- should return 1,073.64
 */
 
-function mortgageCalculator(P,I,N){
+/*function mortgageCalculator(P,I,N){
     let task4 = P * (((I/12) * Math.pow((1 + (I/12)), (N*12))) / ((Math.pow((1 + (I/12)), (N*12))) - 1));
     return task4;
 }
@@ -79,11 +79,19 @@ Hint: To drop an interest rate by 5% you can take monthlyRate and multiply it by
 
 function mortgageCalculator(P, I, N, creditScore){
     let task4 = P * (((I/12) * Math.pow((1 + (I/12)), (N*12))) / ((Math.pow((1 + (I/12)), (N*12))) - 1));
-    return task4;
+    let above740 = 0.95 * (P * (((I/12) * Math.pow((1 + (I/12)), (N*12))) / ((Math.pow((1 + (I/12)), (N*12))) - 1)));
+    let below660 = 1.05 * (P * (((I/12) * Math.pow((1 + (I/12)), (N*12))) / ((Math.pow((1 + (I/12)), (N*12))) - 1)));
+
+    if (creditScore > 740){
+        return above740;
+    }else if (creditScore < 660){
+        return below660;
+    }else{
+        return task4;
+    }
 }
-console.log(mortgageCalculator(200000, 0.05, 30, 800));
 
-
+console.log(mortgageCalculator(200000, 0.05, 30, 650));
 
 // 🏡 Task 6: Loops
 /* Write a new function called variableInterestRate. This function should be the same as mortgageCalculator, except it should console.log the monthly payment for 10 different interest rates at 0.5% increments plus or minus 2% from the inputted interest rate. Complete these calculations using a for loop.
