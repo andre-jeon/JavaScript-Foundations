@@ -81,7 +81,7 @@ function mortgageCalculator(P, I, N, creditScore){
     let task4 = P * (((I/12) * Math.pow((1 + (I/12)), (N*12))) / ((Math.pow((1 + (I/12)), (N*12))) - 1));
     return task4;
 }
-console.log(mortgageCalculator(200000, 0.05, 30));
+console.log(mortgageCalculator(200000, 0.05, 30, 800));
 
 
 
